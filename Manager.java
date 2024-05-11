@@ -3,8 +3,8 @@ package homework3;
 public class Manager extends Employee {
 
     public Manager(String name, String midName, String surName,
-                   String phone, String position, int salary, int birth) {
-        super(name, midName, surName, phone, position, salary, birth);
+                   String phone, String position, int salary, int birth, Genders gender) {
+        super(name, midName, surName, phone, position, salary, birth, gender);
     }
 
     public static void increaser(Employee[] emp, int age, int increment) {

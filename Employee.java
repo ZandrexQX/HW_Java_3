@@ -1,6 +1,8 @@
 package homework3;
 
 public class Employee {
+
+    enum Genders{MALE, FEMALE};
     private static final int CURRENT_YEAR = 2024;
     private String name;
     private String midName;
@@ -11,9 +13,10 @@ public class Employee {
     private int birth;
     private int bMonth;
     private int bDay;
+    private Genders gender;
 
     public Employee(String name, String midName, String surName, String phone,
-                    String position, int salary, int birth) {
+                    String position, int salary, int birth, Genders gender) {
         this.name = name;
         this.midName = midName;
         this.surName = surName;
@@ -21,6 +24,7 @@ public class Employee {
         this.phone = phone;
         this.salary = salary;
         this.birth = birth;
+        this.gender = gender;
     }
 
     public String getName() {
@@ -72,6 +76,14 @@ public class Employee {
         int empl = bDay + (bMonth << 6) + (birth << 11);
         int income = dd + (mm << 6) + (yyyy << 11);
         return empl - income;
+    }
+
+    public Genders getGender() {
+        return gender;
+    }
+
+    public void setGender(Genders gender) {
+        this.gender = gender;
     }
 
     @Override
