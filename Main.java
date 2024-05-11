@@ -55,6 +55,7 @@ public class Main {
         System.out.println("-----------------------------------------------------");
         Manager.increaser(company, 20, 5000);
         printEmployee(company);
+        System.out.println("-----------------------------------------------------");
         celebrate(company);
     }
 }
